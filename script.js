@@ -16,21 +16,41 @@ let shoes = 89.78;
 
 
 // 1. If divided evenly, how much would each sibling get for the week?
+ let eachShare = weeklyAllowance / 3;
+ console.log ("Each sibling gets $: " + eachShare);
 
 // 2. How many games can Jordan buy with their cut?
+let jordanGames = Math.floor(eachShare/game);
+console.log(" Jordan can buy" + jordanGames + "games.");
 
 // 3. The cost of games just went up by a dollar and shoes are on sale at 50% (half) off. Change the variables to their new prices.
+let game2 = game + 1;
+let shoes2 = shoes / 2;
+console.log("New game price: $" + game2, "New shoe price: $" + shoes2);
 
 // 4. Quinn and Ricardo are twins. If they put their money together, how many on sale shoes can they buy in a month (4 weeks)?
+let quinnShare = eachShare;
+let ricardoShare = eachShare;
+let  monthTotal = (quinnShare + ricardoShare) * 4;
+let shoesInMonth = Math.floor(monthTotal / shoes);
+console.log("Shoes Quinn & Ricardo can buy in 4 weeks:" + shoesInMonth);
 
 // 5. How many more games can they buy if they put their money together compared to if they had bought games on their own?
+let totalCombined = (quinnShare + ricardoShare);
+let gamesTogether = Math.floor( totalCombined / game);
+let gamesAlone = Math.floor(quinnShare / game) + Math.floor(ricardoShare / game);
+let moreGames = gamesTogether - gamesAlone;
+console.log("They can buy" + moreGames + " more games together");
 
 // 6. Print out the three siblings' names. "The three siblings are __, __, and ___."
 
+console.log( "The three siblings are " + sibling1 + "," + sibling2 + "," + sibling3 + ",");
 // 7. Use console.log() and a built-in method to count how many characters are in Ricardo's name.
 
+console.log("Characters in Ricardo's name: " + sibling3.length);
 // 8. Use console.log() and a built-in method to print out the string "RICARDO MONTOYA DE LA ROSA RAMIREZ"
 
+console.log( )
 // 9. Use console.log() and a built-in method to print out the string "ricardo montoya de la rosa ramirez"
 
 // 10. Use console.log() and a built-in method to print out Ricardo's name, but with all the instances of the letter a removed or deleted.
